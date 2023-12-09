@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Increased max-width */
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            font-size: 28px; /* Increased font size */
+            margin-bottom: 20px;
+        }
+
+        label, select, textarea, input {
+            margin-bottom: 10px;
+            display: block;
+            font-size: 16px; /* Increased font size */
+        }
+
+        select, textarea {
+            width: 100%;
+            padding: 12px; /* Increased padding */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 20px; /* Increased padding */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px; /* Increased font size */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'evaluated' %}">
+        <br>
+        <br>
+        <br>
+        <h1>Evaluation Form</h1>
+
+        <label for="students">Select Student:</label>
+        <select name="students">
+            <option value="Bill" selected="selected">Bill</option>
+            <option value="Brian">Brian</option>
+            <option value="Debby">Debby</option>
+            <option value="Yutse">Yutse</option>
+            <option value="Ray">Ray</option>
+            <option value="Kenny">Kenny</option>
+            <option value="Sunny">Sunny</option>
+            <option value="Joseph">Joseph</option>
+            <option value="Ray">Ray</option>
+            <option value="Alina">Alina</option>
+            <option value="Nathan">Nathan</option>
+            <option value="Lulu">Lulu</option>
+        </select>
+
+        <label for="class_day">Day of Class:</label>
+        <select name="class_day">
+            <option value="1" selected="selected">Today</option>
+            <option value="2">Yesterday</option>
+            <option value="3">Last Monday</option>
+            <option value="4">Last Tuesday</option>
+            <option value="5">Last Wednesday</option>
+            <option value="6">Last Thursday</option>
+            <option value="7">Last Friday</option>
+            <option value="8">Last Saturday</option>
+            <option value="9">Last Sunday</option>
+        </select>
+
+        <label for="class_status">How did the class go?:</label>
+        <select name="class_status">
+            <option value="1">Pretty Well</option>
+            <option value="2" selected="selected">Smoothly</option>
+            <option value="3">Quite Well</option>
+            <option value="4">Good as Usual</option>
+            <option value="5">Well</option>
+        </select>
+
+        <label for="material">What Material Was Used?:</label>
+        <select name="material">
+            <option value="1">Active Reading</option>
+            <option value="2" selected="selected">Active Reading 2</option>
+            <option value="3">Active Reading 3</option>
+            <option value="4">Unlock 1 LS</option>
+            <option value="5">Unlock 2 LS</option>
+            <option value="6">Unlock 3 LS</option>
+            <option value="7">Unlock 4 LS</option>
+            <option value="8">Complete Key</option>
+            <option value="9">Compact Key</option>
+            <option value="10">Everybody Up 3</option>
+            <option value="11">Free-talking</option>
+        </select>
+
+        <label for="discussion">Discussion:</label>
+        <textarea name="discussion" cols="30" rows="10"></textarea>
+
+        <label for="endtheme">Choose Endtheme:</label>
+        <select name="endtheme">
+            <option value="1" selected="selected">continues to participate actively in class.</option>
+            <option value="2">maintains his good reading and listening skills.</option>
+            <option value="3">maintains her good reading and listening skills.</option>
+            <option value="4">maintains his good grammar and vocabulary skills.</option>
+            <option value="5">maintains her good grammar and vocabulary skills.</option>
+            <option value="6">continues to participate actively and expect more difficult activities.</option>
+            <option value="7">continues to participate really well and maintains his good english skills.</option>
+            <option value="8">continues to participate really well and maintains her good english skills.</option>
+            <option value="9">to continue participating actively in our upcoming classes.</option>
+            <option value="10">expects for more difficult activities and continue to do well in class.</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
